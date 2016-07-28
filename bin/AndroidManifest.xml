@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.adrianjg.dlab"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="18" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-feature android:name="android.hardware.camera" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:theme="@style/SampleAppsTheme" >
+        
+        <!-- Splash screen at splashscreen -->
+        <activity
+            android:name=".ui.ActivitySplashScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.ActivityLauncher"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+         
+        <activity
+            android:name="com.adrianjg.dlab.image.ImageTargets"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+        	android:theme="@style/SampleAppsTheme"
+ 	        android:launchMode="singleTask"
+            >
+        </activity>
+        
+        <activity
+            android:name="com.adrianjg.dlab.history.ViewHistory"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+        	android:theme="@style/SampleAppsTheme"
+ 	        android:launchMode="singleTask"
+            >
+        </activity>
+        
+        <activity
+            android:name="com.adrianjg.dlab.history.NewPatient"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+        	android:theme="@style/SampleAppsTheme"
+ 	         >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+             
+        <activity
+            android:name=".app.FrameMarkers.FrameMarkers"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+        	android:theme="@style/SampleAppsTheme"
+ 	        android:launchMode="singleTask"
+            >
+        </activity>
+        
+        <activity
+            android:name=".app.VirtualButtons.VirtualButtons"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+        	android:theme="@style/SampleAppsTheme"
+ 	        android:launchMode="singleTask"
+            >
+        </activity>
+        
+        <activity
+            android:name=".app.UserDefinedTargets.UserDefinedTargets"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+        	android:theme="@style/SampleAppsTheme"
+ 	        android:launchMode="singleTask"
+            >
+        </activity>
+                 
+        <activity
+            android:name=".app.CloudRecognition.CloudReco"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+        	android:theme="@style/SampleAppsTheme"
+ 	        android:launchMode="singleTask"
+            >
+        </activity>
+        
+    </application>
+
+</manifest>
